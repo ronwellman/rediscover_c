@@ -15,8 +15,10 @@ int main() {
 
 	printarray(numbers, sizeof(numbers) / sizeof(int));
 	printarray(primes, sizeof(primes) / sizeof(int));
+	// invalid pointer address
 	printarray(garbage, 2);
 	
+	// pass by reference (val)
 	status = sum(numbers, sizeof(numbers) / sizeof(int), &val);
 	printf("Status: %d\n", status);
 	printf("Sum: %d\n", val);
@@ -24,15 +26,16 @@ int main() {
 	printf("Status: %d\n", status);
 	printf("Sum: %d\n", val);
 
+	// invalid pointer adddress results in a status of -1
 	status = sum(garbage, sizeof(primes) / sizeof(int), &val);
 	printf("Status: %d\n", status);
 	printf("Sum: %d\n", val);
-
 
 	return 0;
 }
 
 void printarray(int array[], int elements) {
+	// check array before trying to reach into it
 	if (NULL == array) {
 		fprintf(stderr, "array is NULL\n");
 		return;
@@ -46,6 +49,7 @@ void printarray(int array[], int elements) {
 }
 
 int sum(int array[], int elements, int *val) {
+	// check all pointers before trying to use them
 	if (NULL == array || NULL == val) {
 		fprintf(stderr, "pointer is NULL\n");
 		return -1;
