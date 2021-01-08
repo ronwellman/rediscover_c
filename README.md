@@ -18,4 +18,5 @@ Videos for each section have been published on YouTube.
 * 09 - [Reference vs Value](https://youtu.be/mLPgAChrGV8)
 * 10 - [Strings](https://youtu.be/f_zQm93yDxU)
 * 11 - [Dynamic Memory](https://youtu.be/wiT028EFwso)
-* 12 - Working with Files
+* 12 - [Working with Files](https://youtu.be/TECkVP69nVA)
+* 13 - [Structures](https://youtu.be/-p_GmPGE4ko)
